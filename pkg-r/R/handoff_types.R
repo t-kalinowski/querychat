@@ -492,7 +492,7 @@ HandoffState <- S7::new_class(
     handoff_type = HandoffType,
     system_prompt = S7::class_character,
     source = S7::class_character,
-    turns = S7::new_property(S7::class_list, default = quote(list())),
+    turns = S7::new_property(S7::class_list, default = list()),
     summary = S7::new_property(S7::class_character, default = ""),
     install_instructions = S7::new_property(
       S7::class_character,
