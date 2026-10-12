@@ -447,7 +447,7 @@ HandoffGenerateRequest <- S7::new_class(
   properties = list(
     selected_ids = S7::new_property(
       S7::class_character,
-      default = quote(character())
+      default = character()
     ),
     type_id = S7::new_property(S7::class_character, default = ""),
     language = S7::new_property(S7::class_character, default = ""),
@@ -479,7 +479,7 @@ HandoffResult <- S7::new_class(
     run_instructions = S7::new_property(S7::class_character, default = ""),
     referenced_tables = S7::new_property(
       S7::class_character,
-      default = quote(character())
+      default = character()
     )
   ),
   validator = function(self) validate_handoff_result(self)
@@ -501,11 +501,11 @@ HandoffState <- S7::new_class(
     run_instructions = S7::new_property(S7::class_character, default = ""),
     referenced_tables = S7::new_property(
       S7::class_character,
-      default = quote(character())
+      default = character()
     ),
     bundled_tables = S7::new_property(
       S7::class_character,
-      default = quote(character())
+      default = character()
     ),
     bundle_id = S7::new_property(S7::class_any, default = NULL),
     data_instructions = S7::new_property(S7::class_character, default = "")
