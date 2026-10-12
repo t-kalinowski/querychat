@@ -447,7 +447,7 @@ HandoffGenerateRequest <- S7::new_class(
   properties = list(
     selected_ids = S7::new_property(
       S7::class_character,
-      default = character()
+      default = quote(character())
     ),
     type_id = S7::new_property(S7::class_character, default = ""),
     language = S7::new_property(S7::class_character, default = ""),
@@ -479,7 +479,7 @@ HandoffResult <- S7::new_class(
     run_instructions = S7::new_property(S7::class_character, default = ""),
     referenced_tables = S7::new_property(
       S7::class_character,
-      default = character()
+      default = quote(character())
     )
   ),
   validator = function(self) validate_handoff_result(self)
@@ -492,7 +492,7 @@ HandoffState <- S7::new_class(
     handoff_type = HandoffType,
     system_prompt = S7::class_character,
     source = S7::class_character,
-    turns = S7::new_property(S7::class_list, default = list()),
+    turns = S7::new_property(S7::class_list, default = quote(list())),
     summary = S7::new_property(S7::class_character, default = ""),
     install_instructions = S7::new_property(
       S7::class_character,
@@ -501,11 +501,11 @@ HandoffState <- S7::new_class(
     run_instructions = S7::new_property(S7::class_character, default = ""),
     referenced_tables = S7::new_property(
       S7::class_character,
-      default = character()
+      default = quote(character())
     ),
     bundled_tables = S7::new_property(
       S7::class_character,
-      default = character()
+      default = quote(character())
     ),
     bundle_id = S7::new_property(S7::class_any, default = NULL),
     data_instructions = S7::new_property(S7::class_character, default = "")
